@@ -1,0 +1,608 @@
+:root {
+  --main-color: #eeb367cd;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s ease;
+  font-family: elegant;
+}
+section {
+  padding: 3.5rem 7%;
+}
+.heading {
+  color: black;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 0.1rem solid #000000; /* altı çizili geliyor */
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 30rem;
+  font-size: 1rem;
+  color: var(--main-color);
+  background-color: white;
+  cursor: pointer;
+}
+.logo img {
+  height: 4rem;
+  width: 6rem;
+  border-radius: 3rem;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+
+  background-color: var(--black-color);
+}
+body {
+  background-color: white;
+  /* height: 200vh;  sayfanın uzunlugunu belirler */
+}
+section {
+  padding: 3.5rem 7%;
+}
+a {
+  text-decoration: none;
+}
+.buttons {
+  margin-top: 0.5rem;
+  margin-right: 3rem;
+  display: inline-block;
+
+  border-radius: 3rem;
+  font-size: 0.1rem;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+.title {
+  font-size: 2rem;
+}
+
+/*! Header Start */
+.header .logo img {
+  height: 7rem;
+}
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7%;
+  margin: 2rem 7%;
+  border-radius: 30rem;
+  box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: var(--black-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  border-bottom: 0.1rem solid transparent;
+}
+.header .navbar .active,
+.header .navbar a:hover {
+  border-color: var(--main-color);
+  padding-bottom: 0.5rem;
+}
+.header .buttons button {
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  background-color: transparent;
+}
+
+.header .content {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  transform: translate(-60px); /* sola doğru kaydırdım yazıyı logoya doğru */
+  font-style: bold;
+}
+.header .content h3 {
+  color: rgb(30, 25, 22);
+}
+.header .content p {
+  color: rgb(225, 190, 34);
+}
+.header .buttons {
+  transform: translate(-20px);
+}
+.header #menu-btn {
+  display: none; /*! id olarak verdiğimiz menu-btn 'u ilk başta görünmeyeceği için display'ı none yaptık */
+}
+
+/*! Home start */
+.home {
+  min-height: 100vw; /* bilgisayar ekranı boyutunda görünmesi icin boyutunu belirler */
+  background: url(../images/images/home.jpg) no-repeat; /*arka plan fotosunu cagırdık */
+  background-size: cover;
+  background-position: center;
+  margin-top: -13.5rem;
+  display: flex;
+  align-items: center;
+}
+.home .cont {
+  text-align: center;
+}
+
+.home .cont h3 {
+  font-size: 8rem;
+  color: rgba(251, 238, 238, 0.764);
+  text-transform: uppercase;
+  transform: translate(355px);
+  font-family: "Lucida Handwriting";
+}
+.home .cont p {
+  font-size: 5rem;
+  font-weight: 300; /* ince */
+  line-height: 1.8; /* satır arası boşluk */
+  padding: 1rem 0;
+  color: rgba(251, 238, 238, 0.764);
+  transform: translate(355px);
+  font-family: "Lucida Handwriting";
+}
+
+.home .cont .btn {
+  transform: translate(355px);
+  background-color: wheat;
+  border-radius: 2rem;
+  font-size: 2rem;
+}
+.home .cont .btn:hover {
+  opacity: 0.5;
+}
+/*! Home Finish */
+/*! Hizmetler Start */
+.hizmetler .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.hizmetler .box-container .box {
+  background-color: var(--main-color);
+  border-radius: 3rem;
+}
+.hizmetler .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+.hizmetler .box-container .box .image img {
+  height: 100%;
+  object-fit: cover; /*! bu şekilde fotoyu kucultmek ıcın cagırıyoruz*/
+  width: 100%;
+}
+.hizmetler .box-container .box:hover .image img {
+  transform: scale(1.2);
+}
+.hizmetler .box-container .box .contect {
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.hizmetler .box-container .box .contect .title {
+  color: black;
+  font-style: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  border-bottom: 0.1rem solid white;
+}
+.hizmetler .box-container .box .contect span {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+.hizmetler .box-container .box .contect p {
+  font-size: 2rem;
+  padding-top: 1rem;
+  color: #827b7bc6;
+}
+
+/*! Vizyon Start */
+
+/* .vizyon .row {
+  font-size: 1.6rem;
+}
+.vizyon .row .image {
+  width: 900%;
+  margin: auto;
+  column-gap: 5rem;
+}
+
+.sola-kaydir {
+  float: left;
+  pad: 0 10px 10px 0;
+  margin: 0 9px;
+}
+.vizyon .row h3 {
+  font-size: 3rem;
+  color: rgb(216, 164, 41);
+}
+.vizyon .row p {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  padding: 1rem 0rem;
+  line-height: 1.8;
+  font-family: "Times New Roman", Times, serif;
+  font-style: bold;
+  margin: 0 9px;
+} */
+.vizyon .row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem; /*! foto ile yazı arasındaki boşluk için*/
+}
+
+.vizyon .row .image {
+  flex: 1 1 45rem;
+}
+
+.vizyon .row img {
+  width: 100%;
+}
+.vizyon .row .content {
+  flex: 1 1 45rem;
+}
+.vizyon .row .content h3 {
+  font-size: 3rem;
+  color: rgb(216, 164, 41);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.vizyon .row .content p {
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  padding: 1rem 0;
+  line-height: 1.8;
+  font-family: elegant;
+  font-style: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vizyon .row .content .btn {
+  font-size: 2rem;
+  background-color: var(--main-color);
+  color: white;
+}
+.vizyon .content .btn:hover {
+  transform: translate(60px); /* sağa doğru kayma */
+  -webkit-transform: translate(60px);
+}
+
+/*! Vizyon Finish */
+/*! Misyon Start */
+.misyon .row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem; /*! foto ile yazı arasındaki boşluk için*/
+}
+
+.misyon .row .image {
+  flex: 1 1 45rem;
+}
+
+.misyon .row img {
+  width: 100%;
+}
+.misyon .row .content {
+  flex: 1 1 45rem;
+}
+.misyon .row .content h3 {
+  font-size: 3rem;
+  color: rgb(216, 164, 41);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.misyon .row .content p {
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  padding: 1rem 0;
+  line-height: 1.8;
+  font-family: elegant;
+  font-style: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.misyon .row .content .btn {
+  font-size: 2rem;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.misyon .content .btn:hover {
+  transform: translate(60px); /* sağa doğru kayma */
+  -webkit-transform: translate(60px);
+}
+/*! Misyon finish */
+/*! Contact Start */
+.contact .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 17px -2px rgba(134, 124, 124, 0.75);
+}
+.contact .row form {
+  flex: 1 1 45rem;
+
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: rgb(251, 214, 168);
+
+  /* border: 1px solid rgb(234, 13, 13); */
+  box-shadow: 0px 0px 17px -2px rgba(134, 124, 124, 0.75);
+}
+.contact .row form h3 {
+  font-family: elegant;
+
+  font-size: 3.5rem;
+  color: black;
+}
+.contact .row form .inputBOX {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin: 2rem 0;
+  border: var(--border);
+}
+.contact .row form .inputBox i {
+  color: #000000;
+  font-size: 2rem;
+  padding-left: -30rem;
+  padding: 1rem;
+}
+.contact .row form .inputBOX input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.75rem;
+  color: #000000;
+  text-transform: none;
+  background: none;
+}
+.contact .row form .btn {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #000000;
+  color: rgb(255, 255, 255); /* BEYAZ */
+}
+.contact .row form .btn:hover {
+  transform: scale(1.2);
+}
+/* Contact Finish */
+
+/* Blog Start */
+.blog .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.blog .box-container .box {
+  box-shadow: 0px 0px 17px -2px rgba(134, 124, 124, 0.75);
+  padding: 3rem;
+  background-color: rgb(251, 214, 168);
+  border-radius: 5rem;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.blog .box-container .box .box-head img {
+  width: 100%;
+  border-radius: 5rem;
+}
+
+.blog .box-container .box .box-head span {
+  font-size: 2rem;
+  background-color: var(--main-color);
+}
+
+.blog .box-container .box islem-category {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.blog .box-container .box h3 {
+  font-size: 2.75rem;
+  color: rgb(62, 59, 59);
+  padding: 1rem 0;
+}
+.blog .box-container .box h3:hover {
+  color: var(--main-color);
+}
+.blog .box-container .box .özellik {
+  opacity: 0.5;
+  color: rgb(255, 255, 255);
+  font-size: 1.75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2rem 0;
+  font-style: bold;
+}
+
+.blog .box-container .box-bottom .btn {
+  font-size: 1rem;
+  background-color: var(--main-color);
+  color: black;
+}
+.blog .box-container .box-bottom:hover .btn {
+  transform: scale(1.2);
+}
+/* Blog Finish */
+
+/* Footer Start */
+
+.footer {
+  background-color: var(--main-color);
+  text-align: center;
+}
+.footer .search {
+  display: flex;
+  justify-content: center;
+}
+.footer .search .search-input {
+  width: 30rem;
+  border-radius: 3rem;
+}
+.footer .search .btn {
+  background-color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  color: white;
+}
+.footer .share {
+  padding: 2rem 0;
+}
+.footer .share a {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  color: #fffefa;
+  font-size: 2rem;
+  border: var(--border);
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+.footer .share a:hover {
+  background-color: rgba(219, 186, 129, 0.919);
+}
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem; /* Aralarındaki boşluk */
+}
+.footer .links a {
+  background-color: black;
+  padding: 0.7rem 2rem;
+  color: white;
+  font-size: 1.75rem;
+  border: var(--border);
+  border-radius: 2rem;
+}
+.footer .links a:hover {
+  background-color: transparent;
+}
+.footer .credit {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 300;
+  padding-top: 1.5rem;
+}
+.footer .credit span {
+  color: black;
+  box-shadow: 0px 0px 17px -2px rgba(134, 124, 124, 0.75);
+}
+/* Footer Finish */
+
+/* Resposive */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .logo img {
+    height: 5rem;
+    width: 100%;
+  }
+  .header .content h3 {
+    font-size: 2rem;
+    padding-left: 5rem;
+  }
+  .header .content p {
+    font-size: 2rem;
+    padding-left: 5rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .Products .box-container .box .box-head .name {
+    font-size: 3.4rem;
+  }
+  /* .home .cont{
+    padding-left:0;
+    text-align: left;
+  } */
+  /* .home h3, .home p {
+    padding-left: 5rem;
+    text-align: left;
+  } */
+}
+@media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 95px;
+    background-color: #fff;
+    height: calc(100vw - 9rem);
+    width: 100%;
+    box-shadow: 0px 20px 14px 0px rgb(0 0 0 /75%);
+    right: -110%;
+    transition: right 0.3s ease;
+    display: none;
+  }
+
+  .header .active {
+    position: absolute;
+    top: 95px;
+    background-color: #fff;
+    height: calc(100vw - 9rem);
+    width: 100%;
+    box-shadow: 0px 20px 14px 0px rgb(0 0 0 /75%);
+    right: 0%;
+    transition: right 0.3s ease;
+    display: block;
+  }
+  .header .navbar a {
+    color: var(--black-color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .home .cont {
+    display: none;
+
+}
+@media (max-width: 576px) {
+  hmtl {
+    font-size: 50%;
+  }
+}
+}
